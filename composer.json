@@ -9,5 +9,10 @@
             "name": "Maksim Kolmakov",
             "email": "maxim.kolmakov@jetbrains.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
 }
