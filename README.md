@@ -1,33 +1,36 @@
 # NXP Laravel Developer Assignment
 
-## Overview
-A Laravel project designed with a focus on structured development, efficient planning, and clean, reusable code.
+### Requirements
 
-## Objective
-The goal is to design and outline a clean, well-structured Laravel application that follows best practices for:
-- Logical architecture
-- Project planning
-- Code clarity and maintainability
+- PHP 8.1+
+- Composer
+- SQLite (or MySQL)
 
-## Tech Stack
-- **Laravel** (PHP Framework)
-- **MySQL** (Database)
-- **Composer** (Dependency Management)
-- **Blade** (Templating Engine)
+### Setup
 
-## Setup Instructions
-1. Clone this repository.
-2. Run `composer install`.
-3. Copy `.env.example` to `.env` and configure database credentials.
-4. Run `php artisan key:generate`.
-5. Run migrations using `php artisan migrate`.
-6. Start the development server using `php artisan serve`.
+1. Clone the repo
+2. Run `composer install`
+3. Copy `.env.example` to `.env` and set up the database
+4. Run `php artisan key:generate`
+5. Run `php artisan migrate --seed`
+6. Run `php artisan serve`
 
-## Author
-**Gurjeet Singh Bagga**  
-Laravel Developer  
-Email: gurjeetsbagga@gmail.com
+Visit: [http://localhost:8000](http://localhost:8000)
+
+### Test the feature
+
+```bash
+curl -X POST http://localhost:8000/api/providers/1/orders \
+  -H "Content-Type: application/json" \
+  -d '{"items":[{"product_id":1,"quantity":2}]}'
+```
 
 ---
 
-> Initial version: Project setup and documentation initialized.
+## Notes
+
+- Add login system later using Laravel Sanctum.
+- Add reports for stock and orders.
+- Add payments and renewals later.
+
+---

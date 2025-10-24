@@ -12,7 +12,11 @@
     ],
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
-        }
+            "App\\": "app/",
+            "Tests\\": "tests/"
+        },
+        "classmap": [
+            "database/seeders"
+        ]
     }
 }
